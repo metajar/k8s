@@ -59,11 +59,12 @@ spec:
   - host: sqs-web.henrynetworks.com
     http:
       paths:
-      - path: /web
-        backend:      
+      - backend:
           serviceName: sqs-local-aws-web
-          servicePort: 9325  
-      - path: /
-        backend:      
+          servicePort: 9325
+  - host: sqs.henrynetworks.com
+    http:
+      paths:
+      - backend:
           serviceName: sqs-local-aws-sqs
-          servicePort: 9324            
+          servicePort: 9324
